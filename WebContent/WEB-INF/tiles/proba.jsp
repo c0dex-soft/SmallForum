@@ -1,0 +1,3 @@
+<h2>Probna Stranica</h2>
+Ovo je probna stranica...
+<p>Akcija za izvesti: <span style="color: red; font-weight: bold;">${action}</span></p>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.8.2.201610040608-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/com/purplemagic/spring/web/config/dao-context.xml</config>
+		<config>WebContent/WEB-INF/smallforum-servlet.xml</config>
+		<config>src/com/purplemagic/spring/web/config/service-context.xml</config>
+		<config>src/com/purplemagic/spring/web/config/security-context.xml</config>
+		<config>test/com/purplemagic/spring/web/test/config/datasource.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

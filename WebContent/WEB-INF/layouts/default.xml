@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition name="forum.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="css-main" value=""></put-attribute>
+		<put-attribute name="css-login" value=""></put-attribute>
+		<put-attribute name="css-topics" value=""></put-attribute>
+		<put-attribute name="script" value=""></put-attribute>
+		<put-attribute name="title" value="smallForum - forumBase"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/default/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/default/content.jsp"></put-attribute>		
+		<put-attribute name="footer" value="/WEB-INF/tiles/default/footer.jsp"></put-attribute>		
+	</definition>
+
+	<definition name="home" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="smallForum - Glavna Stranica"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="login" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="css-login" value="/WEB-INF/tiles/css/css_login.jsp"></put-attribute>
+		<put-attribute name="title" value="Logovanje na sistem"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/loging/login.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="loggedout" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Izlogovali ste se"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/loging/loggedout.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="admin" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Administratorska stranica"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/admin/admin.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topics" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Lista postojecih tema"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topics.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="newaccount" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="script" value="/WEB-INF/tiles/script/script_newaccount.jsp"></put-attribute>
+		<put-attribute name="title" value="Kreiranje novog naloga"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/account/newaccount.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountcreated" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Nalog je kreiran"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/account/accountcreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="createtopic" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Kreiranje nove teme"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/createtopic.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topiccreated" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Nova tema je kreirana"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topiccreated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topicpage" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" expression="Tema - ${title}"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topicpage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="createpost" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" expression="Odgovor na temu - ${topicname}"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/post/createpost.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="denied" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Odbijen pristup"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error/denied.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="error" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Greska"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error/error.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="emptyresult" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Nema podataka"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error/emptyresult.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="searchedlist" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Rezultat pretrage"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/searchedlist.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="adminerror" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Admin error"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error/adminerror.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="mytopics" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Sve Vase teme"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/mytopics.jsp"></put-attribute>
+	</definition>
+
+	<definition name="editordeletetopic" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Izmena ili brisanje teme"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/editordeletetopic.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topicupdated" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Izmenjena tema"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topicupdated.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topicupdateproblem" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Problem prilikom izmene teme"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topicupdateproblem.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topicdeleted" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Obrisana tema"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topicdeleted.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="topicdeleteproblem" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Problem prilikom brisanja teme"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/topic/topicdeleteproblem.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="proba" extends="forum.base">
+		<put-attribute name="css-main" value="/WEB-INF/tiles/css/css_main.jsp"></put-attribute>
+		<put-attribute name="title" value="Probna stranica"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/proba.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,1 @@
+Developed by Marko Z. Petkovic &copy; 2017</span><span style="float: right">markop.018@gmail.com</span>
